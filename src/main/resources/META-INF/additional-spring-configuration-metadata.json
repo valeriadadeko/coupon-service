@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "coupon.sources.sites",
+      "type": "java.util.List<org.home.couponservice.config.CouponSourcesConfig.CouponSite>",
+      "description": "Description for coupon.sources.sites.",
+      "sourceType": "org.home.couponservice.config.CouponSourcesConfig"
+    }
+  ] }

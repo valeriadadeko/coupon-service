@@ -1,0 +1,31 @@
+server.port: 8080
+
+spring:
+  application.name: coupon-service
+  profiles.active: dev
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: couponDb
+      username: couponService
+      password: couponService
+coupon.sources:
+  sites:
+    -
+      url: https://lovikod.ru/knigi/promokody-litres
+      locale-code: ru
+      coupon-list-container-selector: article.item-page > table
+      coupon-container-selector: tr:gt(0)
+      valid-field-selector: td:eq(0)
+      promoCode-field-selector: td:eq(1)
+      description-field-selector: td:eq(2)
+      date-patterns:
+            - ^((?<month>[а-яА-я]+)([ \t])*(?<year>[0-9]{4}))$
+            - ^((до){0,1}([ \t])*(?<date>([0-9]){2}(\.|-)([0-9]){2}(\.|-)([0-9]){2,4}))$
+    #-
+      #  url: https://tesssssssst.com
+      #coupon-list-container-selector: test2
+      #coupon-container-selector: test2
+      #valid-field-selector: test2
+      #promoCode-field-selector: test2

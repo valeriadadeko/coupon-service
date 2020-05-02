@@ -1,0 +1,6 @@
+#used in Spring Cloud to get configuration from configuration service.
+server.port: 8080
+
+spring:
+  application.name: coupon-service
+  profiles.active: dev
