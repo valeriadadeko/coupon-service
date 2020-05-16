@@ -14,14 +14,12 @@ public class CouponGetter {
 
     final CouponRepository couponRepository;
     final CouponSourcesConfig couponSourcesConfig;
-    private final MongoTemplate mongoTemplate;
 
     private CouponSource couponSource;
 
-    public CouponGetter(CouponRepository couponRepository, CouponSourcesConfig couponSourcesConfig, MongoTemplate mongoTemplate) {
+    public CouponGetter(CouponRepository couponRepository, CouponSourcesConfig couponSourcesConfig) {
         this.couponRepository = couponRepository;
         this.couponSourcesConfig = couponSourcesConfig;
-        this.mongoTemplate = mongoTemplate;
     }
 
     public void startCouponSearch() {

@@ -13,6 +13,7 @@ public class Coupon {
     private String promoCode;
     private String description;
     private LocalDate validUntil;
+    private LocalDate createdOn;
 
 
     public Coupon() {}
@@ -21,6 +22,7 @@ public class Coupon {
         this.promoCode = promoCode;
         this.description = description;
         this.validUntil = validUntil;
+        this.createdOn = LocalDate.now();
     }
 
     @Override
@@ -61,4 +63,11 @@ public class Coupon {
         this.id = id;
     }
 
+    public LocalDate getCreatedOn() {
+        return createdOn;
+    }
+
+    public void setCreatedOn(LocalDate createdOn) {
+        this.createdOn = createdOn;
+    }
 }
