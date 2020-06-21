@@ -27,8 +27,6 @@ public class SiteCouponSource implements CouponSource {
     @Override
     public List<Coupon> getCoupons() {
 
-        System.out.println("Coupons will be get from next sites:" + couponSourcesConfig.getSites());
-
         List<Coupon> coupons = new ArrayList<>();
         couponSourcesConfig.getSites().forEach(
                 (couponSiteConfig) -> {
