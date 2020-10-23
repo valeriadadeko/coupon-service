@@ -29,9 +29,7 @@ public class SiteCouponSource implements CouponSource {
 
         List<Coupon> coupons = new ArrayList<>();
         couponSourcesConfig.getSites().forEach(
-                (couponSiteConfig) -> {
-                    coupons.addAll(parsePageFoCoupons(couponSiteConfig));
-                }
+                (couponSiteConfig) -> coupons.addAll(parsePageFoCoupons(couponSiteConfig))
         );
 
         return coupons;
